@@ -1,0 +1,12 @@
+spring:
+  config.activate.on-profile: postgres
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bank_db?currentSchema=public
+    username: srivatsan
+    password: password
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 10
+      pool-name: postgres-con
+      auto-commit: false

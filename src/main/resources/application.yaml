@@ -1,0 +1,18 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /${spring.application.name}/${spring.application.version}
+---
+
+spring:
+  application:
+    name: bank-transfer
+    version: v1
+  profiles.active: postgres
+  jpa:
+    open-in-view: false
+    hibernate.ddl-auto: update
+    show-sql: false
+    properties.hibernate.format_sql: true
+  sql.init.mode: never
+  output.ansi.enabled: always
